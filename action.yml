@@ -5,8 +5,7 @@ author: 'Andrew Mason <andrewmcodes@protonmail.com>. Updated by Anton Shilin <an
 inputs:
   RUBY_VERSION:
     description: 'Defines the ruby version.'
-    required: false
-    default: '2.6.5'
+    required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
