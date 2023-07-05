@@ -3,7 +3,7 @@ name: 'StandardRB Action'
 description: 'A GitHub Action that lints your Ruby code with StandardRB!'
 author: 'Andrew Mason <andrewmcodes@protonmail.com>. Updated by Anton Shilin <anton.shilin@jetrockets.com>'
 inputs:
-  RUBY_VERSION:
+  ruby-version:
     description: 'Defines the ruby version.'
     required: false
     default: '2.6.5-alpine'
