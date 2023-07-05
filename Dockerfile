@@ -1,9 +1,9 @@
 # It accepts selected Ruby version as an argument.
-ARG RUBY_VERSION
+ARG RUBY_VERSION=2.6.5-alpine
 
 FROM ubuntu:latest
 
-RUN if [[ -z "$RUBY_VERSION" ]] ; then echo RUBY_VERSION=2.6.5-alpine ; else echo RUBY_VERSION is $RUBY_VERSION ; fi
+RUN echo "The ruby-version is: $RUBY_VERSION"
 
 FROM ruby:$RUBY_VERSION
 
