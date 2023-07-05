@@ -10,10 +10,9 @@ inputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - RUBY_VERSION: ${{ inputs.ruby-version }}
 env:
   GITHUB_TOKEN: secrets.GITHUB_TOKEN
+  RUBY_VERSION: ${{ inputs.ruby-version }}
 branding:
   icon: 'code'
   color: 'gray-dark'
