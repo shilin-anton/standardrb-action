@@ -1,4 +1,7 @@
-FROM ruby:2.6.5-alpine
+# It accepts selected Ruby version as an argument.
+ARG RUBY_VERSION
+
+FROM ruby:$RUBY_VERSION
 
 RUN apk add --update build-base git
 
