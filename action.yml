@@ -6,12 +6,12 @@ inputs:
   ruby-version:
     description: 'Defines the ruby version.'
     required: false
-    default: '2.6.5-alpine'
+    default: '3.2.1'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.RUBY_VERSION }}
+    - RUBY_VERSION=${{ inputs.ruby-version }}
 env:
   GITHUB_TOKEN: secrets.GITHUB_TOKEN
 branding:
