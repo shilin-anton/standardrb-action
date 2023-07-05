@@ -10,7 +10,7 @@ inputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  with:
+  env:
     RUBY_VERSION: inputs.RUBY_VERSION
 env:
   GITHUB_TOKEN: secrets.GITHUB_TOKEN
