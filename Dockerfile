@@ -1,7 +1,11 @@
 # It accepts selected Ruby version as an argument.
 ARG RUBY_VERSION
 
-FROM ruby:3.2.1-slim
+FROM ubuntu:latest
+
+RUN if [[ -z "$RUBY_VERSION" ]] ; then echo RUBY_VERSION=2.6.5-alpine ; else echo RUBY_VERSION is $RUBY_VERSION ; fi
+
+FROM ruby:$RUBY_VERSION
 
 RUN apk add --update build-base git
 
