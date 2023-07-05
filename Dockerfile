@@ -1,8 +1,6 @@
 # It accepts selected Ruby version as an argument.
 ARG RUBY_VERSION
 
-RUN echo wtf?
-
 FROM ruby:$RUBY_VERSION
 
 RUN apk add --update build-base git
